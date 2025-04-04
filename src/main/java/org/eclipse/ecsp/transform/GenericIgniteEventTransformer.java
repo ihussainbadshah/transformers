@@ -43,7 +43,6 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
-
 import org.apache.commons.lang3.StringUtils;
 import org.eclipse.ecsp.domain.EventAttribute;
 import org.eclipse.ecsp.domain.EventID;

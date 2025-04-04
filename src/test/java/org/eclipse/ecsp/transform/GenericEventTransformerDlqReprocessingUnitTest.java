@@ -41,7 +41,6 @@ package org.eclipse.ecsp.transform;
 
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
-
 import org.eclipse.ecsp.domain.EventID;
 import org.eclipse.ecsp.domain.IgniteExceptionDataV1_1;
 import org.eclipse.ecsp.domain.NestedDLQExceptionData;
@@ -50,7 +49,6 @@ import org.eclipse.ecsp.domain.Version;
 import org.eclipse.ecsp.entities.GenericEventData;
 import org.eclipse.ecsp.entities.IgniteEvent;
 import org.eclipse.ecsp.entities.IgniteEventImpl;
-import org.eclipse.ecsp.transform.GenericIgniteEventTransformer;
 import org.jetbrains.annotations.NotNull;
 import org.junit.Assert;
 import org.junit.Before;
