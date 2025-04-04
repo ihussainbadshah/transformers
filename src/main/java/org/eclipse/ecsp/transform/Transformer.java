@@ -63,7 +63,7 @@ public interface Transformer {
      * </p>
      *
      * @param value : byte[]
-     * @param header : Optional of {@Link IgniteEventBase}
+     * @param header : Optional of {@link IgniteEventBase}
      * @return igniteEvent : IgniteEvent
      */
     public default IgniteEvent fromBlob(byte[] value, Optional<IgniteEventBase> header) {
