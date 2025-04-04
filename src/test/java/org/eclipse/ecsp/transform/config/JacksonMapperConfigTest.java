@@ -43,8 +43,6 @@ import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-
-import org.eclipse.ecsp.transform.config.JacksonMapperConfig;
 import org.junit.Assert;
 import org.junit.Test;
 import org.slf4j.Logger;

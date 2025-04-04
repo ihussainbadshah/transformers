@@ -43,7 +43,6 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ser.impl.SimpleFilterProvider;
-
 import org.eclipse.ecsp.domain.DongleStatusV1_0;
 import org.eclipse.ecsp.domain.IgniteEventSource;
 import org.eclipse.ecsp.domain.SpeedV1_0;
@@ -52,8 +51,6 @@ import org.eclipse.ecsp.entities.EventData;
 import org.eclipse.ecsp.entities.GenericEventData;
 import org.eclipse.ecsp.entities.IgniteEvent;
 import org.eclipse.ecsp.entities.UserContext;
-import org.eclipse.ecsp.transform.GenericIgniteEventTransformer;
-import org.eclipse.ecsp.transform.TransformerSerDeException;
 import org.json.JSONException;
 import org.junit.Assert;
 import org.junit.Test;

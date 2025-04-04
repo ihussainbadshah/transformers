@@ -40,10 +40,7 @@
 package org.eclipse.ecsp.transform;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-
 import org.eclipse.ecsp.entities.IgniteEvent;
-import org.eclipse.ecsp.transform.DeviceMessageIgniteEventTransformer;
-import org.eclipse.ecsp.transform.TransformerSerDeException;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;

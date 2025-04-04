@@ -46,11 +46,8 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.JsonNodeFactory;
 import com.fasterxml.jackson.databind.node.ObjectNode;
-
 import org.eclipse.ecsp.entities.IgniteEvent;
 import org.eclipse.ecsp.entities.IgniteEventImpl;
-import org.eclipse.ecsp.transform.GenericIgniteEventTransformer;
-import org.eclipse.ecsp.transform.TransformerSerDeException;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Rule;
