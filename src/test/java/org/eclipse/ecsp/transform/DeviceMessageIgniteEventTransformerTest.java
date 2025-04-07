@@ -44,13 +44,9 @@ import org.eclipse.ecsp.domain.EventAttribute;
 import org.eclipse.ecsp.domain.IgniteEventSource;
 import org.eclipse.ecsp.domain.Version;
 import org.eclipse.ecsp.entities.IgniteEventImpl;
-import org.eclipse.ecsp.transform.DeviceMessageIgniteEventTransformer;
-import org.eclipse.ecsp.transform.GenericIgniteEventTransformer;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
@@ -71,9 +67,6 @@ public class DeviceMessageIgniteEventTransformerTest {
 
     /** The Constant TEN. */
     private static final int TEN = 10;
-
-    /** The Constant LOGGER. */
-    private static final Logger LOGGER = LoggerFactory.getLogger(DeviceMessageIgniteEventTransformerTest.class);
 
     /** The transformer. */
     @Autowired

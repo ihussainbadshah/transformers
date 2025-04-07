@@ -46,7 +46,7 @@ public class User {
     private String name = "user1";
 
     public User() {
-
+        //Nothing to do.
     }
 
     public String getName() {

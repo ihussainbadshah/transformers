@@ -47,8 +47,6 @@ import org.junit.Test;
 import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnit;
 import org.mockito.junit.MockitoRule;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.util.Optional;
 
@@ -60,9 +58,6 @@ import java.util.Optional;
  */
 public class DeviceMessageIgniteEventTransformerUnitTest {
 
-    /** The Constant LOGGER. */
-    private static final Logger LOGGER = LoggerFactory.getLogger(DeviceMessageIgniteEventTransformerUnitTest.class);
-    
     /** The mockito rule. */
     @Rule
     public MockitoRule mockitoRule = MockitoJUnit.rule();

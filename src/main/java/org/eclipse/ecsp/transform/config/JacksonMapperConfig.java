@@ -51,6 +51,7 @@ import com.fasterxml.jackson.databind.ser.impl.SimpleFilterProvider;
 import org.apache.commons.lang3.StringUtils;
 import org.eclipse.ecsp.utils.logger.IgniteLogger;
 import org.eclipse.ecsp.utils.logger.IgniteLoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -118,6 +119,7 @@ public class JacksonMapperConfig {
     /**
      * Instantiates a new jackson mapper config.
      */
+    @Autowired
     public JacksonMapperConfig() {
 
     }

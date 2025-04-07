@@ -53,8 +53,6 @@ import org.jetbrains.annotations.NotNull;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -74,9 +72,6 @@ import java.util.Optional;
 
 public class GenericEventTransformerDlqReprocessingUnitTest {
 
-    /** The Constant LOGGER. */
-    private static final Logger LOGGER = LoggerFactory.getLogger(GenericEventTransformerDlqReprocessingUnitTest.class);
-    
     /** The Constant TEN. */
     private static final int TEN = 10;
     

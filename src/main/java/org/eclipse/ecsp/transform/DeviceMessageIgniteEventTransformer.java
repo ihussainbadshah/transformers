@@ -78,7 +78,6 @@ public class DeviceMessageIgniteEventTransformer implements Transformer {
     private static final Logger LOGGER = LoggerFactory.getLogger(DeviceMessageIgniteEventTransformer.class);
     
     /** The ObjectMapper instance. */
-    @Autowired
     private ObjectMapper jsonMapper;
     
     /** The ObjectWrite instance. */
@@ -88,6 +87,7 @@ public class DeviceMessageIgniteEventTransformer implements Transformer {
      * Default constructor that creates and initializes the ObjectMapper instance in this class.
      *
      */
+    @Autowired
     public DeviceMessageIgniteEventTransformer() {
         // In case if this object is created using c'tor not via spring, then we
         // have to initialize json mapper and device writer

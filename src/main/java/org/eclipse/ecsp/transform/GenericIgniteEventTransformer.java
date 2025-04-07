@@ -113,7 +113,6 @@ public class GenericIgniteEventTransformer implements Transformer {
     public static final int TWO = 2;
 
     /** The ObjectMapper instance. */
-    @Autowired
     private ObjectMapper jsonMapper;
 
     /** The Environment instance. */
@@ -131,6 +130,7 @@ public class GenericIgniteEventTransformer implements Transformer {
      * Default constructor of GenericIgniteEventTransformer which initializes the ObjectMapper 
      * instance in this transformer class to read / write JSONs.
      */
+    @Autowired
     public GenericIgniteEventTransformer() {
         if (jsonMapper == null) {
             jsonMapper = new JacksonMapperConfig().jsonObjectMapper();
