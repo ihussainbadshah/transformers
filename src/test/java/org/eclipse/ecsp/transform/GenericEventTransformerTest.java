@@ -286,7 +286,7 @@ public class GenericEventTransformerTest {
      * @return the ignite event
      */
     private static IgniteEvent getIgniteEvent(String vehicleId, String requestId, String deviceId) {
-        IgniteEvent headerEvent = new TestEvent(vehicleId, requestId, deviceId, null);
+        IgniteEvent headerEvent = new TestEvent(vehicleId, requestId, deviceId);
         return headerEvent;
     }
 
@@ -305,7 +305,7 @@ public class GenericEventTransformerTest {
         String messageId = null;
 
         // creating header event
-        IgniteEvent headerEvent = new TestEvent(vehicleId, requestId, sourceDeviceId, messageId);
+        IgniteEvent headerEvent = new TestEvent(vehicleId, requestId, sourceDeviceId);
         // send the optional header event to the method
         IgniteEvent event = transformer.fromBlob(speedEvent.getBytes(), Optional.of(headerEvent));
 
@@ -668,9 +668,6 @@ public class GenericEventTransformerTest {
         
         /** The source device id. */
         private final String sourceDeviceId;
-        
-        /** The message id. */
-        private final String messageId;
 
         /**
          * Instantiates a new test event.
@@ -680,11 +677,10 @@ public class GenericEventTransformerTest {
          * @param sourceDeviceId the source device id
          * @param messageId the message id
          */
-        public TestEvent(String vehicleId, String requestId, String sourceDeviceId, String messageId) {
+        public TestEvent(String vehicleId, String requestId, String sourceDeviceId) {
             this.vehicleId = vehicleId;
             this.requestId = requestId;
             this.sourceDeviceId = sourceDeviceId;
-            this.messageId = messageId;
         }
 
         /**
@@ -713,7 +709,9 @@ public class GenericEventTransformerTest {
          * @param v the new schema version
          */
         @Override
-        public void setSchemaVersion(Version v) {}
+        public void setSchemaVersion(Version v) {
+            return;
+        }
 
         /**
          * Gets the version.
@@ -951,6 +949,7 @@ public class GenericEventTransformerTest {
          */
         @Override
         public void setTracingContext(String context) {
+            return;
         }
 
         /**

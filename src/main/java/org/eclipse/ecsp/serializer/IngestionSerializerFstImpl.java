@@ -130,7 +130,7 @@ public class IngestionSerializerFstImpl implements IngestionSerializer {
         if (ObjectUtils.isEmpty(properties)) {
             properties = new Properties();
             LOGGER.info("Loading properties from environment");
-            System.getenv().forEach((k, v) -> properties.setProperty(k.replaceAll("_", "."), v));
+            System.getenv().forEach((k, v) -> properties.setProperty(k.replace("_", "."), v));
             LOGGER.info("device.aware.enabled:" + properties.get(DEVICE_AWARE_ENABLED));
         }
     }
