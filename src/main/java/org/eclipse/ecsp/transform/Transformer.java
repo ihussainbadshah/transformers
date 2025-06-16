@@ -95,6 +95,8 @@ public interface Transformer {
 
     /**
      * Source will determine which implementation of the transformer should be used.
+     *
+     * @return source : String
      */
     public String getSource();
 

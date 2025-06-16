@@ -59,6 +59,11 @@
             <name>Hussain Badshah</name>
             <email>Hussain.Badshah@harman.com</email>
         </developer>
+        <developer>
+            <id>kaushalaroraharman</id>
+            <name>Kaushal Arora</name>
+            <email>kaushal.arora@harman.com</email>
+        </developer>
     </developers>
 
     <licenses>
@@ -83,7 +88,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <spring.test.version>6.1.14</spring.test.version>
         <utils.version>1.1.0</utils.version>
-        <entities.version>1.1.1</entities.version>
+        <entities.version>1.1.2</entities.version>
         <maven.surefire.version>2.18.1</maven.surefire.version>
         <!--Checkstyle plugin properties -->
         <checkstyle.version>10.13.0</checkstyle.version>
@@ -123,17 +128,6 @@
             --add-opens=java.sql/java.sql=ALL-UNNAMED
         </java.17.options>
     </properties>
-
-    <distributionManagement>
-        <snapshotRepository>
-			<id>ossrh</id>
-			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
-		</snapshotRepository>
-		<repository>
-			<id>ossrh</id>
-			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-		</repository>
-    </distributionManagement>
 
     <pluginRepositories>
         <pluginRepository>
@@ -478,29 +472,21 @@
 			<properties>
                 <maven.test.skip>true</maven.test.skip>
             </properties>
-			<distributionManagement>
-                <snapshotRepository>
-                    <id>ossrh</id>
-                    <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-                </snapshotRepository>
-                <repository>
-                    <id>ossrh</id>
-                    <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-                </repository>
-            </distributionManagement>
             <build>
                 <plugins>
 					<plugin>
-						<groupId>org.sonatype.plugins</groupId>
-						<artifactId>nexus-staging-maven-plugin</artifactId>
-						<version>1.6.13</version>
-						<extensions>true</extensions>
-						<configuration>
-							<serverId>ossrh</serverId>
-							<nexusUrl>https://oss.sonatype.org/</nexusUrl>
-							<autoReleaseAfterClose>true</autoReleaseAfterClose>
-						</configuration>
-					</plugin>
+                        <groupId>org.sonatype.central</groupId>
+                        <artifactId>central-publishing-maven-plugin</artifactId>
+                        <version>0.7.0</version>
+                        <extensions>true</extensions>
+                        <configuration>
+                            <publishingServerId>central</publishingServerId>
+                            <autoPublish>true</autoPublish>
+                            <waitUntil>published</waitUntil>
+                            <centralSnapshotsUrl>https://central.sonatype.com/repository/maven-snapshots/</centralSnapshotsUrl>
+                            <skipPublishing>false</skipPublishing>
+                        </configuration>
+                    </plugin>
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-gpg-plugin</artifactId>
@@ -548,16 +534,6 @@
 			<properties>
                 <maven.test.skip>true</maven.test.skip>
             </properties>
-			<distributionManagement>
-                <snapshotRepository>
-                    <id>ossrh</id>
-                    <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-                </snapshotRepository>
-                <repository>
-                    <id>ossrh</id>
-                    <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-                </repository>
-            </distributionManagement>
             <build>
                 <plugins>
 					<plugin>
